@@ -31,7 +31,11 @@ public void after() throws Exception {
 */ 
 @Test
 public void testSend() throws Exception {
-    SendEmail.getSendEmail().send("2622953398@qq.com","主题","内容");
+
+    for (int i = 500; i < 1500; i++) {
+        SendEmail.getSendEmail().send("liuwang@liuw53.top","smtp test" + i,"内容" + i);
+    }
+
 }
 
 @Test

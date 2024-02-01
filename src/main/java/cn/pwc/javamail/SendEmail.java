@@ -61,7 +61,10 @@ public class SendEmail {
         InputStream inputStream = SendEmail.class.getClassLoader().getResourceAsStream("mail.properties");
         properties.load(inputStream);
         //生成sendEmail实例并初始化
-        sendEmail = new SendEmail(properties.getProperty("username"),properties.getProperty("password"),properties.getProperty("server"));
+        sendEmail = new SendEmail(
+                properties.getProperty("username"),
+                properties.getProperty("password"),
+                properties.getProperty("server"));
         return sendEmail;
     }
 
